@@ -25,6 +25,19 @@ class Solution {
             return 0;
         return 1 + Math.max(depth(root.left), depth(root.right));
     }
+
+    /**
+     * O(N) 时间复杂度
+     */
+    public int depth(TreeNode root) {
+        if (root == null)
+            return 0;
+        int left = depth(root.left);
+        if (left == -1) return -1;
+        int right = depth(root.right);
+        if (right == -1) return -1;
+        return Math.abs(left - right) > 1 ? -1 : 1 + Math.max(left, right);
+    }
 }
 // @lc code=end
 
