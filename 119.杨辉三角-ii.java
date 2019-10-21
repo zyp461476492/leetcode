@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * @lc app=leetcode.cn id=119 lang=java
  *
@@ -15,6 +17,7 @@ class Solution {
             }
             cur.add(1);// 补上每层的最后一个 1
         }
+    
         return cur;
 
     }
