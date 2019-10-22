@@ -9,8 +9,11 @@ import java.util.HashMap;
 // @lc code=start
 class Solution {
     public int singleNumber(int[] nums) {
-        HashMap<Integer, Integer> map;
-    
+        int a = 0;
+        for (int num : nums) {
+            a ^= num;
+        }
+        return a;
     }
 }
 // @lc code=end
