@@ -1,0 +1,26 @@
+/*
+ * @lc app=leetcode.cn id=1 lang=java
+ *
+ * [1] 两数之和
+ */
+
+// @lc code=start
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int lo = 0;
+        int hi = numbers.length - 1;
+        while (lo < hi) {
+            int sum = numbers[lo] + numbers[hi];
+            if (sum == target) {
+                return new int[] {lo + 1, hi + 1};
+            } else if (sum > target) {
+                hi--;
+            } else if (sum < target) {
+                lo++;
+            }
+        }
+        throw new IllegalArgumentException("No such answer");
+    }
+}
+// @lc code=end
+
