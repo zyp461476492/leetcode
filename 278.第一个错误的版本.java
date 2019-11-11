@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * @lc app=leetcode.cn id=278 lang=java
  *
@@ -20,6 +22,7 @@ public class Solution extends VersionControl {
             } else {
                 // [mid + 1, right] 中去寻找是否存在最小的错误
                 left = mid + 1;
+                
             }
         }
         return left;
