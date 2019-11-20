@@ -7,6 +7,7 @@
 // @lc code=start
 class Solution {
     public char findTheDifference(String s, String t) {
+        
         int[] bucket = new int[26];
         for (int i = 0; i < s.length(); i++) {
             bucket[s.charAt(i) - 'a']++;
