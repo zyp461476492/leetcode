@@ -10,7 +10,6 @@ import java.util.Set;
 // @lc code=start
 class Solution {
     public int longestPalindrome(String s) {
-        
         HashMap<Character, Integer> map = new HashMap<>();
         int p = 0;
         while (p < s.length()) {
