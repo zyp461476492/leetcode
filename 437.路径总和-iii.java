@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.List;
 
 /*
  * @lc app=leetcode.cn id=437 lang=java
@@ -22,12 +23,16 @@ class Solution {
         HashMap<Integer, Integer> pathMap = new HashMap<>();
         // 路径长度为0的目前有一个
         pathMap.put(0, 1);
+        
         return core(root, pathMap, sum, 0);
     }
 
     public int core(TreeNode root, HashMap<Integer, Integer> pathMap, int sum, int curSum) {
         if (root == null) return 0;
         curSum = curSum + root.val;
+        String s;
+        List l;
+        l.to
         // n = sum - curSum n为符合要求的路径，查找它的数量
         int answer = pathMap.getOrDefault(curSum - sum, 0);
         // 把当前的路径放入
