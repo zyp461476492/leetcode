@@ -10,17 +10,19 @@ class Solution {
         int cnt = 0;
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] > nums[i + 1]) {
+                int temp = nums[i];
                 if (i >= 1) {
+                    // 前一个元素
                     nums[i] = nums[i - 1];
                 } else {
+                    // 后一个元素
                     nums[i] = nums[i + 1];
                 }
 
                 if (nums[i] > nums[i + 1]) {
-                    // 交换位置，进行调整
-                    int temp = nums[i + 1];
-                    nums[i + 1] = nums[i];
+                    // 恢复 nums[i]
                     nums[i] = temp;
+                    nums[i + 1] = nums[i];
                 }
 
                 cnt++;
